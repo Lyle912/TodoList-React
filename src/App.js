@@ -19,13 +19,23 @@ class App extends Component {
         id: 3,
         title: "Do laundry",
         completed: false,
-      }
-    ]
-  }
+      },
+    ],
+  };
+
+  markComplete = (id) => {
+    this.setState({
+      todos: this.state.todos.map((todo) => {
+        if (todo.id === id) todo.completed = !todo.completed;
+        return todo;
+      }),
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <TodoList todos = {this.state.todos}/>
+        <TodoList todos={this.state.todos} markComplete={this.markComplete} />
       </div>
     );
   }
