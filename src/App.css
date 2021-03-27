@@ -18,7 +18,7 @@ a {
   padding: 0 1rem;
 }
 
-.button{
+.button {
   display: inline-block;
   border: none;
   background-color: #555;
@@ -27,6 +27,6 @@ a {
   cursor: pointer;
 }
 
-.button:hover{
-  background-color: #666
+.button:hover {
+  background-color: #666;
 }
