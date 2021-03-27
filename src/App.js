@@ -3,22 +3,23 @@ import "./App.css";
 import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
 import Header from "./components/layout/Header";
+import {v4 as uuid} from 'uuid'
 
 class App extends Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid(),
         title: "Clean dishes",
         completed: false,
       },
       {
-        id: 2,
+        id: uuid(),
         title: "Cook Dinner",
         completed: false,
       },
       {
-        id: 3,
+        id: uuid(),
         title: "Do laundry",
         completed: false,
       },
@@ -42,13 +43,13 @@ class App extends Component {
 
   addTodo = (title) => {
     const newTodo = {
-      id: 4,
+      id: uuid(),
       title,
       completed: false,
-    }
+    };
     this.setState({
-      todos: [...this.state.todos, newTodo]
-    })
+      todos: [...this.state.todos, newTodo],
+    });
   };
 
   render() {
